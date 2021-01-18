@@ -35,6 +35,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 ## Memory Management
 
 1. Pass the object snake by reference instead of value to the function void Renderer::Render(Snake const &snake, SDL_Point const &food).
+2. Convert the raw pointers for SDL_Window and SDL_Renderer to shared pointers.
 
 
 
