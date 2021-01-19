@@ -34,8 +34,12 @@ In this project, you can build your own C++ application or extend this Snake gam
 
 ## Memory Management
 
-1. Pass the object snake by reference instead of value to the function void Renderer::Render(Snake const &snake, SDL_Point const &food).
+1. Pass the object snake by reference instead of value to the function void Renderer::Render(Snake const &snake, SDL_Point const &food). Pass the input parameters to the function "Snake::SnakeCell" by reference.
 2. Convert the raw pointers for SDL_Window and SDL_Renderer to shared pointers.
+
+## Object Oriented Programming
+
+1. Convert all the data members of the class Snake from public to private and add the setters and getters for these data members.
 
 
 
