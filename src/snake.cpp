@@ -66,7 +66,8 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
 void Snake::GrowBody() { growing = true; }
 
 // Inefficient method to check if cell is occupied by snake.
-bool Snake::SnakeCell(int x, int y) {
+/*Memory Mngt Feature one*/
+bool Snake::SnakeCell(int const &x, int const &y) {
   if (x == static_cast<int>(head_x) && y == static_cast<int>(head_y)) {
     return true;
   }
@@ -76,4 +77,44 @@ bool Snake::SnakeCell(int x, int y) {
     }
   }
   return false;
+}
+
+Snake::Direction Snake::getDirection() const /*Object oriented :Feature 1 */
+{
+  return direction;
+}
+
+void Snake::setDirection(Snake::Direction d)  /*Object oriented :Feature 1 */
+{
+  direction = d ;
+}
+
+void Snake::incrementSpeed(float s) /*Object oriented :Feature 1 */
+{
+  speed += s;
+}
+
+int Snake::getSize() const /*Object oriented :Feature 1 */
+{
+  return size;
+}
+
+bool Snake::getAlive() const /*Object oriented :Feature 1 */
+{
+  return alive;
+}
+
+std::vector<SDL_Point> Snake::getBody() const/*Object oriented :Feature 1 */
+{
+  return body ;
+}
+
+
+float Snake::getHead_x() const/*Object oriented :Feature 1 */
+{
+  return head_x;
+}
+float Snake::getHead_y() const/*Object oriented :Feature 1 */
+{
+  return head_y;
 }
