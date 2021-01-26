@@ -65,7 +65,6 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
 
 void Snake::GrowBody() { growing = true; }
 
-// Inefficient method to check if cell is occupied by snake.
 /*Memory Mngt Feature one*/
 bool Snake::SnakeCell(int const &x, int const &y) {
   if (x == static_cast<int>(head_x) && y == static_cast<int>(head_y)) {
